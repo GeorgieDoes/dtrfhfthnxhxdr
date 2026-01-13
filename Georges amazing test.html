@@ -74,31 +74,31 @@ const quiz = [
 // -------- LECTURE 1 --------
 {
 q:"What is the main goal of testing?",
-options:["Prove correctness","Discover defects","Write documentation","Generate code"],
+options:["Prove system correctness","Discover software defects","Write project documentation","Generate source code"],
 correct:1,
 explanation:"Testing aims to discover defects by comparing actual and expected behaviour."
 },
 {
 q:"Can testing prove the absence of bugs?",
-options:["Yes, with 100% coverage","Yes, with formal methods only","No, testing can only show presence of bugs","Yes, with mutation testing"],
+options:["Yes, with 100% coverage","Yes, using formal methods","No, only shows presence","Yes, using mutation tests"],
 correct:2,
 explanation:"Testing can only reveal bugs, not prove their absence (Dijkstra)."
 },
 {
 q:"What is an Error in software testing?",
-options:["A static bug in code","An observable failure","An incorrect internal state","A missing test"],
+options:["A static bug in code","An observable failure","Incorrect internal state","A missing test case"],
 correct:2,
 explanation:"An error is the incorrect program state that results from executing a fault."
 },
 {
 q:"What question does Validation answer?",
-options:["Are we building the product right?","Are we building the right product?","Does the code compile?","Is the performance optimal?"],
+options:["Build the product right?","Build the right product?","Does the code compile?","Is performance optimal?"],
 correct:1,
 explanation:"Validation ensures the product meets customer expectations and needs."
 },
 {
 q:"What question does Verification answer?",
-options:["Are we building the product right?","Are we building the right product?","Do we have enough tests?","Is the customer happy?"],
+options:["Build the product right?","Build the right product?","Enough tests written?","Is the customer happy?"],
 correct:0,
 explanation:"Verification checks conformance to functional and non-functional requirements."
 },
@@ -110,19 +110,19 @@ explanation:"RIP stands for Reachability, Infection, and Propagation."
 },
 {
 q:"What is a Fault?",
-options:["A dynamic flaw in program state","An observable incorrect behaviour","A static flaw in code","A runtime crash"],
+options:["Dynamic state flaw","Observable behaviour","Static flaw in code","A runtime crash"],
 correct:2,
 explanation:"A fault (bug) is a static flaw in the source code."
 },
 {
 q:"What is a Failure?",
-options:["A static bug","An internal bad state","Observable incorrect behaviour","A missing requirement"],
+options:["A static source bug","Internal error state","Observable behaviour","Missing requirement"],
 correct:2,
 explanation:"A failure is the external, observable incorrect behaviour resulting from an error state."
 },
 {
 q:"What is a Test Oracle?",
-options:["A tool to generate tests","The source of truth deciding if behaviour is correct","A database for test results","A flaky test"],
+options:["Generator of tests","The truth mechanism","Results database","A flaky test"],
 correct:1,
 explanation:"An oracle decides if observed behaviour matches expected behaviour."
 },
@@ -134,13 +134,13 @@ explanation:"The P stands for Propagation - the error must propagate to program 
 },
 {
 q:"What is Reachability in the RIP model?",
-options:["The fault location must be reached","Code coverage percentage","Test execution time","Mutation score"],
+options:["Fault location hit","Coverage percentage","Test execution time","Mutation score"],
 correct:0,
 explanation:"Reachability means the test must execute the location containing the fault."
 },
 {
 q:"How is Reliability defined in this context?",
-options:["Probability of successful execution on random input","100% test coverage","Zero bugs found","Fast execution speed"],
+options:["Success probability","100% test coverage","Zero bugs found","Execution speed"],
 correct:0,
 explanation:"Reliability is the probability of successful execution on a randomly selected element from the input domain."
 },
@@ -152,25 +152,25 @@ explanation:"Unit testing checks small pieces of code like methods or classes in
 },
 {
 q:"What characterizes Black-box testing?",
-options:["Testing with full knowledge of internal code","Testing without knowledge of internal structure","Testing for memory leaks","Testing assuming code is correct"],
+options:["Known internal code","Unknown structure","Memory leak test","Assumed correctness"],
 correct:1,
 explanation:"Black-box testing examines the system from the outside based on specifications."
 },
 {
 q:"What is White-box testing based on?",
-options:["User requirements only","Internal code structure","External specifications","Random inputs"],
+options:["User requirements","Internal structure","External specs","Random inputs"],
 correct:1,
 explanation:"White-box testing uses knowledge of internal implementation and structure."
 },
 {
 q:"What is regression testing?",
-options:["Testing new features only","Re-running tests after changes","Performance testing","Initial system testing"],
+options:["Test new features","Rerunning old tests","Performance testing","Initial system test"],
 correct:1,
 explanation:"Regression testing ensures existing functionality still works after changes."
 },
 {
 q:"What is Integration Testing?",
-options:["Testing individual units","Testing component interactions","Testing user acceptance","Testing performance"],
+options:["Individual units","Unit interactions","User acceptance","Performance level"],
 correct:1,
 explanation:"Integration testing checks how different components work together."
 },
@@ -178,61 +178,61 @@ explanation:"Integration testing checks how different components work together."
 // -------- LECTURE 2 --------
 {
 q:"What is unit testing?",
-options:["Testing the entire system","Testing a specific unit in isolation","Testing only UI","Testing performance"],
+options:["Whole system test","Isolated unit test","Only UI testing","Performance test"],
 correct:1,
 explanation:"Unit testing targets a single unit (method/class/component) in isolation."
 },
 {
 q:"What is the main benefit of unit testing?",
-options:["System-wide validation","Fast feedback and fault localization","User acceptance","Security testing"],
+options:["System validation","Fast localization","User acceptance","Security testing"],
 correct:1,
 explanation:"Unit tests provide quick feedback and make it easy to pinpoint where faults occur."
 },
 {
 q:"What is test independence?",
-options:["Tests share state","Tests can run in any order","Tests need specific sequence","Tests depend on each other"],
+options:["Tests share state","Order independent","Specific sequence","Tests are coupled"],
 correct:1,
 explanation:"Independent tests can run in any order without affecting each other's results."
 },
 {
 q:"Which of the following can unit testing be?",
-options:["Only manual","Only automated","Manual or automated","Only random"],
+options:["Strictly manual","Strictly automated","Manual or automated","Strictly random"],
 correct:2,
 explanation:"Unit tests can be manual or automated."
 },
 {
 q:"What does a failing unit test indicate?",
-options:["The test is wrong","The code does not compile","Unexpected behaviour for given input","Requirements are missing"],
+options:["The test is wrong","Code won't compile","Unexpected output","Missing requirement"],
 correct:2,
 explanation:"A failing test means the code behaves unexpectedly for that specific input."
 },
 {
 q:"Why should test inputs be simplified?",
-options:["Increase randomness","Reduce runtime","Ease debugging","Increase coverage"],
+options:["Increase randomness","Reduce runtime","Ease of debugging","Increase coverage"],
 correct:2,
 explanation:"Simpler input makes it easier to debug and locate faults."
 },
 {
 q:"What is an executable specification?",
-options:["Documentation","Test code defining expected behaviour","UML diagrams","User stories"],
+options:["Documentation","Tests as behavior","UML diagrams","User stories"],
 correct:1,
 explanation:"Tests describe expected behaviour in executable form."
 },
 {
 q:"Why should tests cover as little code as possible?",
-options:["Reduce runtime","Avoid mocking","Precisely locate faults","Reduce test count"],
+options:["Reduced runtime","Avoid mocking","Precise localization","Reduce test count"],
 correct:2,
 explanation:"Small focused tests make fault localization easier."
 },
 {
 q:"Why are fast-running tests important?",
-options:["Better documentation","Faster regression testing","Higher mutation score","Improved requirements"],
+options:["Better docs","Fast regression","Mutation score","Requirement check"],
 correct:1,
 explanation:"Fast tests allow frequent and quick regression testing."
 },
 {
 q:"Why is asserting exact output stronger than asserting types?",
-options:["More readable","Faster execution","Detects more faults","Reduces coupling"],
+options:["More readable","Faster run","More fault detection","Less coupling"],
 correct:2,
 explanation:"Checking exact output detects incorrect behaviour, not just type correctness."
 },
@@ -244,67 +244,67 @@ explanation:"JUnit is a Java X-Unit testing framework."
 },
 {
 q:"What is mocking mainly used for?",
-options:["Improve performance","Replace hard dependencies","Generate random input","Increase coverage"],
+options:["Better speed","Isolate dependencies","Randomize input","Higher coverage"],
 correct:1,
 explanation:"Mocks replace difficult dependencies to make testing easier."
 },
 {
 q:"What is a test stub?",
-options:["A failing test","A replacement for a dependency with predetermined responses","A performance test","A documentation tool"],
+options:["Failing test case","Predetermined logic","Performance utility","Documentation tool"],
 correct:1,
 explanation:"Stubs provide canned answers to calls made during tests."
 },
 {
 q:"What is a test spy?",
-options:["A security test","A mock that records information about calls","A random test generator","A coverage tool"],
+options:["Security monitor","Recording mock","Random generator","Coverage utility"],
 correct:1,
 explanation:"Spies record information about how they were called for verification."
 },
 {
 q:"What is a flaky test?",
-options:["A test that always fails","A test with non-deterministic results","A test with no assertions","A fast test"],
+options:["Always failing","Non-deterministic","Has no assertions","Fast execution"],
 correct:1,
 explanation:"Flaky tests sometimes pass and sometimes fail without code changes."
 },
 {
 q:"What does dependency injection improve?",
-options:["Coverage","Hard-coded dependencies","Syntax","Performance"],
+options:["Code coverage","Test decoupling","Syntax clarity","Run performance"],
 correct:1,
 explanation:"Dependency injection removes hard-coded dependencies, improving testability."
 },
 {
 q:"Which code is indeterministic?",
-options:["Pure functions","Static code","Random or time-based code","Isolated code"],
+options:["Pure functions","Static logic","Random or time","Isolated logic"],
 correct:2,
 explanation:"Random and time-based code produces different outputs for same input."
 },
 {
 q:"What is the core idea of TDD?",
-options:["Write code first","Write tests before code","Avoid refactoring","Manual testing"],
+options:["Write code first","Write test first","Avoid refactor","Manual tests"],
 correct:1,
 explanation:"TDD enforces writing tests before implementation."
 },
 {
 q:"What are the steps of TDD?",
-options:["Plan-Code-Deploy","Design-Implement-Debug","Red-Green-Refactor","Test-Release-Maintain"],
+options:["Plan-Code-Deploy","Design-Run-Main","Red-Green-Refactor","Test-Release-Fix"],
 correct:2,
 explanation:"Red: failing test, Green: make it pass, Refactor: clean code."
 },
 {
 q:"What is the Red phase in TDD?",
-options:["Fix bugs","Write a failing test","Refactor code","Deploy to production"],
+options:["Fix code bugs","Write failing test","Refactor logic","Deploy feature"],
 correct:1,
 explanation:"Red phase: write a test that fails because the feature doesn't exist yet."
 },
 {
 q:"What is the Green phase in TDD?",
-options:["Write documentation","Write minimum code to pass test","Optimize performance","Review code"],
+options:["Write docs","Pass the test","Optimise code","Review logic"],
 correct:1,
 explanation:"Green phase: write just enough code to make the test pass."
 },
 {
 q:"What is code smell?",
-options:["Syntax error","Sign of deeper problem in code","Performance issue","Security vulnerability"],
+options:["Syntax error","Design problem","Speed issues","Security hole"],
 correct:1,
 explanation:"Code smell indicates potential design or quality issues that may need refactoring."
 },
@@ -312,25 +312,25 @@ explanation:"Code smell indicates potential design or quality issues that may ne
 // -------- LECTURE 3 --------
 {
 q:"When is a test suite considered adequate?",
-options:["All paths tested","All tests pass","Each requirement has at least one test","100% mutation score"],
+options:["All paths hit","Tests all pass","Cover requirements","100% mutation"],
 correct:2,
 explanation:"Adequacy requires every requirement to be tested."
 },
 {
 q:"What is statement coverage?",
-options:["Percentage of statements executed","Number of test cases","Lines of code written","Documentation completeness"],
+options:["Lines executed","Count of tests","Written lines","Documentation"],
 correct:0,
 explanation:"Statement coverage measures the percentage of code statements executed by tests."
 },
 {
 q:"What is branch coverage?",
-options:["Number of functions tested","Percentage of decision branches executed","Code complexity measure","Test execution time"],
+options:["Function count","Decision paths","Code complexity","Execution time"],
 correct:1,
 explanation:"Branch coverage measures how many decision paths (true/false) are tested."
 },
 {
 q:"What is path coverage?",
-options:["Testing all possible execution paths","Testing main path only","Testing error paths only","Testing random paths"],
+options:["All code paths","The main path","The error path","Random paths"],
 correct:0,
 explanation:"Path coverage aims to test all possible paths through the code."
 },
@@ -342,61 +342,61 @@ explanation:"Mutation is a testing technique, not basic code coverage."
 },
 {
 q:"Why is some code hard to test?",
-options:["Too fast","No dependencies","Uses external resources/state","High coverage"],
+options:["Run is fast","No coupling","External state","High coverage"],
 correct:2,
 explanation:"External resources introduce state, timing, and configuration issues."
 },
 {
 q:"What is a smoke test?",
-options:["Test without asserts","UI test","Performance test","Regression test"],
+options:["Minimal check","UI scenario","Speed metric","Old regression"],
 correct:0,
 explanation:"Smoke tests check for obvious failures without detailed assertions."
 },
 {
 q:"What does mutation testing measure?",
-options:["Speed","Readability","Test suite fault detection","Execution order"],
+options:["Run speed","Readability","Fault find rate","Exec order"],
 correct:2,
 explanation:"Mutation testing checks if tests catch injected defects."
 },
 {
 q:"What is a mutant in mutation testing?",
-options:["A new test case","A modified version of code with injected fault","A test that fails","A coverage report"],
+options:["New test case","Injected fault","Failed testing","Coverage data"],
 correct:1,
 explanation:"A mutant is the program with a small, deliberate fault introduced."
 },
 {
 q:"What does it mean if a mutant is 'killed'?",
-options:["Code doesn't compile","Tests detect the injected fault","Mutant survives","Test is removed"],
+options:["Build failure","Fault detected","Mutant escaped","Test deleted"],
 correct:1,
 explanation:"A killed mutant means the test suite successfully detected the injected fault."
 },
 {
 q:"What is a surviving mutant?",
-options:["A test that passes","A fault not caught by tests","Correct code","High coverage"],
+options:["Passing test","Escaped fault","Correct logic","High coverage"],
 correct:1,
 explanation:"Surviving mutants indicate faults the test suite failed to detect."
 },
 {
 q:"What is the mutation score?",
-options:["Test execution speed","Percentage of killed mutants","Number of tests","Code complexity"],
+options:["Exec speed","Killed mutants","Test volume","Code complexity"],
 correct:1,
 explanation:"Mutation score = killed mutants / total mutants, measuring test effectiveness."
 },
 {
 q:"Checked coverage focuses on:",
-options:["Executed lines","Instructions affecting asserted outcome","Test count","Dependency depth"],
+options:["Total lines","Asserted lines","Total tests","Logic depth"],
 correct:1,
 explanation:"Only code affecting assertions matters."
 },
 {
 q:"What is cyclomatic complexity?",
-options:["Number of tests","Number of independent paths through code","Lines of code","Number of variables"],
+options:["Test volume","Path count","Line count","Variable count"],
 correct:1,
 explanation:"Cyclomatic complexity measures the number of linearly independent paths."
 },
 {
 q:"Why is 100% code coverage not sufficient?",
-options:["Too slow","Doesn't guarantee all behaviors tested","Too expensive","Not automatable"],
+options:["Runtime slow","Logic missed","Cost is high","Manual work"],
 correct:1,
 explanation:"Coverage measures execution, not correctness - you still need good assertions."
 },
@@ -404,79 +404,79 @@ explanation:"Coverage measures execution, not correctness - you still need good 
 // -------- LECTURE 4 --------
 {
 q:"What is test traceability?",
-options:["Speed of tests","Link tests to requirements/code","Reduce test count","Increase randomness"],
+options:["Run speed","Requirement link","Reduced count","Randomness"],
 correct:1,
 explanation:"Traceability connects tests to requirements and code."
 },
 {
 q:"What is a test case?",
-options:["A bug report","Specific inputs, conditions, and expected results","A test framework","Code coverage metric"],
+options:["Bug report","Defined setup","Framework","Code metric"],
 correct:1,
 explanation:"A test case specifies inputs, execution conditions, and expected outcomes."
 },
 {
 q:"What is a test suite?",
-options:["A single test","Collection of related test cases","Testing tool","Test environment"],
+options:["Single test","Test grouping","Testing tool","Environment"],
 correct:1,
 explanation:"A test suite is a collection of test cases grouped together."
 },
 {
 q:"Which is non-functional testing?",
-options:["Login validation","CRUD operations","Performance testing","Business logic"],
+options:["Login check","CRUD logic","Performance","Business rules"],
 correct:2,
 explanation:"Performance is a non-functional requirement."
 },
 {
 q:"Goal of equivalence partitioning?",
-options:["Test everything","Divide input into representative sets","Test invalid only","White-box testing"],
+options:["Test all data","Representative","Invalid only","White-box"],
 correct:1,
 explanation:"Equivalent inputs behave similarly, reducing needed tests."
 },
 {
 q:"What are equivalence classes?",
-options:["Types of bugs","Groups of inputs expected to behave similarly","Test execution times","Coverage metrics"],
+options:["Bug types","Input groups","Run times","Metrics"],
 correct:1,
 explanation:"Equivalence classes group inputs that should produce similar behavior."
 },
 {
 q:"What is the goal of boundary value analysis?",
-options:["Test random values","Test edge cases at partition boundaries","Test middle values","Ignore edge cases"],
+options:["Random data","Partition edges","Median data","Ignore edges"],
 correct:1,
 explanation:"Boundaries between partitions are where bugs commonly occur."
 },
 {
 q:"Boundary value analysis tests:",
-options:["Random values","Typical values","Edges of partitions","Internal logic"],
+options:["Random data","Typical data","Edges of range","Internal logic"],
 correct:2,
 explanation:"Boundaries are common sources of bugs."
 },
 {
 q:"What is exploratory testing?",
-options:["Random automated testing","Simultaneous learning, design and execution","Only manual testing","Performance testing"],
+options:["Randomized","Hybrid study","Manual only","Performance"],
 correct:1,
 explanation:"Exploratory testing involves learning about the system while designing and executing tests."
 },
 {
 q:"What is a test scenario?",
-options:["High-level user workflow","Single assertion","Code coverage metric","Bug report"],
+options:["User workflow","One assertion","Code metric","Bug report"],
 correct:0,
 explanation:"Test scenarios describe high-level user interactions and workflows."
 },
 {
 q:"What is acceptance testing?",
-options:["Unit testing","Validating system meets customer needs","Performance testing","Code review"],
+options:["Unit level","Needs validation","Speed check","Code review"],
 correct:1,
 explanation:"Acceptance testing validates the system satisfies business requirements and user needs."
 },
 {
 q:"What is alpha testing?",
-options:["Testing by end users","Testing by developers in controlled environment","Performance testing","Security testing"],
+options:["User testing","Internal test","Speed check","Security scan"],
 correct:1,
 explanation:"Alpha testing is done by internal teams before external release."
 },
 {
 q:"What is beta testing?",
-options:["Testing by real users in real environment","Testing by developers","Automated testing only","Performance testing"],
+options:["Real environment","Developer test","Automated only","Performance"],
 correct:0,
 explanation:"Beta testing involves real users testing in actual usage conditions."
 },
@@ -484,19 +484,19 @@ explanation:"Beta testing involves real users testing in actual usage conditions
 // -------- LECTURE 5 --------
 {
 q:"What is a test strategy?",
-options:["Bug list","How goals are achieved with means","Test case details","Test plan replacement"],
+options:["A bug list","Goal achieving","Case details","Plan update"],
 correct:1,
 explanation:"Strategy defines how testing goals are reached using available means."
 },
 {
 q:"What is a test plan?",
-options:["Source code","Document outlining testing approach and scope","Bug tracking system","Automated test"],
+options:["Source code","Process doc","Bug tracker","Automated test"],
 correct:1,
 explanation:"A test plan documents objectives, scope, approach, resources, and schedule."
 },
 {
 q:"What should a test plan include?",
-options:["Only test cases","Scope, objectives, resources, schedule, risks","Source code","User manuals"],
+options:["Only tests","Full scope","Source code","User help"],
 correct:1,
 explanation:"Test plans cover scope, objectives, approach, resources, schedule, and risks."
 },
@@ -508,43 +508,43 @@ explanation:"Unit tests are cheap, fast, and automated."
 },
 {
 q:"Why is traceability important in a test plan?",
-options:["Speed","Link failures to requirements","Reduce docs","Avoid regression"],
+options:["Run speed","Failure link","Reduce docs","Regression"],
 correct:1,
 explanation:"Traceability helps understand what failed and why."
 },
 {
 q:"What does BDD emphasize?",
-options:["Coverage","User-centric behaviour","Mutation","Static analysis"],
+options:["Total coverage","User behavior","Code mutation","Static check"],
 correct:1,
 explanation:"BDD focuses on user behaviour and shared understanding."
 },
 {
 q:"What language does BDD typically use?",
-options:["Java","Given-When-Then format","SQL","Assembly"],
+options:["Java code","Given format","SQL queries","Assembler"],
 correct:1,
 explanation:"BDD uses Given-When-Then (Gherkin) syntax for readable test scenarios."
 },
 {
 q:"What is the purpose of Given-When-Then?",
-options:["Code optimization","Describe test scenario in natural language","Database queries","Performance testing"],
+options:["Optimisation","Human readable","Database query","Speed testing"],
 correct:1,
 explanation:"Given (context), When (action), Then (outcome) creates readable test specifications."
 },
 {
 q:"What is continuous integration (CI)?",
-options:["Manual testing only","Frequently merging code with automated testing","Deploy once yearly","Code review process"],
+options:["Manual only","Frequent merging","Annual deploy","Code review"],
 correct:1,
 explanation:"CI automatically builds and tests code with each integration."
 },
 {
 q:"What is continuous delivery (CD)?",
-options:["Manual deployment","Automated deployment to production","Testing only","Code review"],
+options:["Manual step","Auto release","Test phase","Code review"],
 correct:1,
 explanation:"CD automates the release process so software can be deployed reliably at any time."
 },
 {
 q:"Why start testing early?",
-options:["Delay development","Increase manual tests","Reduce risk and cost","Avoid automation"],
+options:["Delay work","Manual focus","Reduce risk","No automation"],
 correct:2,
 explanation:"Early testing reduces defects and cost."
 },
@@ -562,54 +562,146 @@ explanation:"Cypress runs directly in the browser."
 },
 {
 q:"Selenium WebDriver is:",
-options:["API tester","Unit framework","Browser automation tool","Mocking library"],
+options:["API tester","Unit tool","Browser tool","Mock library"],
 correct:2,
 explanation:"Selenium automates real browsers for end-to-end testing."
 },
 {
 q:"What is the testing pyramid?",
-options:["Bug severity levels","Ratio of unit:integration:E2E tests","Test execution order","Team hierarchy"],
+options:["Severity levels","Test ratios","Exec order","Team rank"],
 correct:1,
 explanation:"Testing pyramid shows more unit tests at base, fewer integration, and even fewer E2E tests."
 },
 {
 q:"What is end-to-end (E2E) testing?",
-options:["Unit testing","Testing complete user workflows through the system","Performance only","Security only"],
+options:["Unit testing","User workflow","Speed only","Safety only"],
 correct:1,
 explanation:"E2E testing validates entire workflows from user perspective."
 },
 {
 q:"What is a smoke test in deployment?",
-options:["Performance test","Quick check of critical functionality","Security scan","Full regression"],
+options:["Speed test","Critical check","Security scan","Full regression"],
 correct:1,
 explanation:"Smoke tests quickly verify basic functionality after deployment."
 },
 {
 q:"What is load testing?",
-options:["Testing with expected user load","Testing individual functions","Testing code quality","Testing security"],
+options:["User volume","Target unit","Code quality","Security check"],
 correct:0,
 explanation:"Load testing checks system behavior under expected user traffic."
 },
 {
 q:"What is stress testing?",
-options:["Testing under normal load","Testing beyond capacity limits","Testing code style","Testing documentation"],
+options:["Normal load","Over capacity","Code styling","Manual help"],
 correct:1,
 explanation:"Stress testing pushes the system beyond normal limits to find breaking points."
 },
 {
 q:"What is the purpose of a test environment?",
-options:["Production deployment","Isolated setup for testing","Code editor","Bug tracker"],
+options:["Live deploy","Isolated setup","Target editor","Bug tracking"],
 correct:1,
 explanation:"Test environments provide controlled settings separate from production."
 },
 {
 q:"What is test automation?",
-options:["Manual testing only","Using tools to execute tests automatically","Writing documentation","Code review"],
+options:["Manual only","Tool based","Written docs","Code review"],
 correct:1,
 explanation:"Test automation uses scripts and tools to run tests without manual intervention."
+},
+// -------- ADDITIONAL QUESTIONS --------
+{
+q:"What is the 'Pesticide Paradox' in software testing?",
+options:["Resistant bugs","Limited finding","Tool overload","Manual efficiency"],
+correct:1,
+explanation:"If the same tests are repeated, they will eventually stop finding new bugs."
+},
+{
+q:"What is 'Exhaustive Testing'?",
+options:["Tester fatigue","All input combos","Main path only","Single execution"],
+correct:1,
+explanation:"Exhaustive testing is generally impossible due to the infinite number of input and condition combinations."
+},
+{
+q:"What defines the 'Absence-of-errors' fallacy?",
+options:["Zero bug hype","Unavoidable bug","Useless audit","Easy detection"],
+correct:0,
+explanation:"A system with no bugs can still be a failure if it's unusable or doesn't meet requirements."
+},
+{
+q:"Which of these is a type of Static Testing?",
+options:["Unit level test","Code inspection","Performance check","Integration step"],
+correct:1,
+explanation:"Static testing involves examining code or documentation without executing the program."
+},
+{
+q:"What is a 'Fake' object in the context of test doubles?",
+options:["Logic stub","Simplified app","Recorder mock","Input source"],
+correct:1,
+explanation:"Fakes have working implementations but usually take shortcuts (e.g., an in-memory database)."
+},
+{
+q:"What is the primary goal of 'Decision Table Testing'?",
+options:["Table integrity","Condition mix","UI layout level","Basic coverage"],
+correct:1,
+explanation:"Decision tables are used to model complex business rules where multiple conditions affect outcomes."
+},
+{
+q:"What does 'State Transition Testing' focus on?",
+options:["Memory use","System changes","Schema shift","UI animation"],
+correct:1,
+explanation:"It focuses on the transitions between different states of the system based on specific inputs."
+},
+{
+q:"How would you describe 'Error Guessing'?",
+options:["Use AI help","Past experience","Random clicking","Random input"],
+correct:1,
+explanation:"Experienced testers use their intuition and past knowledge to target likely error-prone areas."
+},
+{
+q:"Which of these is considered a non-functional testing type?",
+options:["Boundary scan","Usability test","Input grouping","Code coverage"],
+correct:1,
+explanation:"Usability, security, and performance are non-functional attributes of a system."
+},
+{
+q:"What is 'Sanity Testing' usually used for?",
+options:["Mental check","Bug fix check","Full feature","User criteria"],
+correct:1,
+explanation:"Sanity testing is a quick, deep check to verify that a specific bug fix or change works as expected."
+},
+{
+q:"A 'Fagan Inspection' is what type of testing activity?",
+options:["Auto pentest","Static review","Speed profile","Security audit"],
+correct:1,
+explanation:"Fagan inspection is a formal, highly structured static testing process."
+},
+{
+q:"In BDD, what does a 'Feature' usually represent?",
+options:["Small function","User capability","Single report","Unit test case"],
+correct:1,
+explanation:"A Feature in BDD/Gherkin describes a high-level piece of functionality from the user's perspective."
+},
+{
+q:"What is 'MTBF' (Mean Time Between Failures) used to measure?",
+options:["System speed","Reliability rate","Maintenance cost","Safety level"],
+correct:1,
+explanation:"MTBF is a key metric used to quantify the reliability of a system."
+},
+{
+q:"What is 'Grey-box testing'?",
+options:["Zero knowledge","Partial detail","Interface only","Hardware logic"],
+correct:1,
+explanation:"Grey-box testing combines black-box inputs with partial knowledge of the internal code or database structure."
+},
+{
+q:"What is the 'Golden Path' or 'Happy Path' in testing?",
+options:["Costly suite","Expected flow","High stress","Covered logic"],
+correct:1,
+explanation:"The happy path is a test scenario that uses valid input and results in expected, error-free behavior."
 }
 ];
-
+// Shuffle the quiz questions for better studying
+quiz.sort(() => Math.random() - 0.5);
 let current = 0;
 let score = 0;
 let answered = false;
@@ -630,11 +722,16 @@ function load() {
     qEl.textContent = `Q${current + 1}/${quiz.length}: ${q.q}`;
     oEl.innerHTML = "";
 
-    q.options.forEach((opt, i) => {
+    // Create choices with original indices and shuffle them
+    const choices = q.options.map((opt, i) => ({ text: opt, index: i }));
+    choices.sort(() => Math.random() - 0.5);
+
+    choices.forEach((choice) => {
         const d = document.createElement("div");
         d.className = "option";
-        d.textContent = opt;
-        d.onclick = () => answer(d, i);
+        d.textContent = choice.text;
+        d.dataset.index = choice.index; // Store original index
+        d.onclick = () => answer(d, choice.index);
         oEl.appendChild(d);
     });
 }
@@ -646,7 +743,12 @@ function answer(el, i) {
     const q = quiz[current];
     const opts = document.querySelectorAll(".option");
 
-    opts[q.correct].classList.add("correct");
+    // Highlight the correct one based on stored original index
+    opts.forEach(opt => {
+        if (parseInt(opt.dataset.index) === q.correct) {
+            opt.classList.add("correct");
+        }
+    });
 
     if (i === q.correct) {
         score++;
